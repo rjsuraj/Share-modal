@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Gilroy;
+}
+
+#wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.circle1{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(-25deg, #d84869, #f46641); 
+    border-radius: 50%;
+    top: 10%;
+    left: 30%;
+    box-shadow: 0 0 50px #d84869;
+    animation: move-circle1 4s infinite alternate;
+}
+
+@keyframes move-circle1 {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(15%);
+    }
+}
+
+.circle2{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(-25deg, #5648d8, #8641f4);
+    border-radius: 50%;
+    bottom: 5%;
+    right: 25%;
+    box-shadow: 0 0 5cap #5648d8;
+    animation: move-circle2 4s infinite alternate;
+}
+
+@keyframes move-circle2 {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-15%);
+    }
+}
+
+.profile-card{
+    width: 410px;
+    height: 490px;
+    border: 2px solid #ffffff30;
+    background-color: #ffffff1a;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+.user-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.user-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.user-name{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.user-desc{
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.5;
+    letter-spacing: 1px;
+}
+
+.btn-grp{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn{
+    border: 1px solid gray;
+    padding: 9px 0;
+    width: 9rem;
+    border-radius: 5px;
+    border:2px solid #ffffffb9;
+    background: #ffffff00;
+    font-size: 14px;
+    color: #ffffffb9;
+    text-align: center;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: 0.5s ease-in-out;
+}
+
+.share-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.btn:hover{
+    background-color: #ffffffb9;
+    color: #131313;
+}
+
+.fa-share{
+    font-size: 14px;
+}
+
+.share-btn p{
+    margin-bottom: 2px;
+}
+
+.overlay{
+    position: absolute;
+    background-color: #5f5f5f83;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.modal{
+    position: absolute;
+    scale: 0;
+    width: 550px;
+    height: 270px;
+    border: 2px solid grey;
+    padding: 27px;
+    z-index: 1;
+    border-radius: 15px;
+    background-color: #00000088;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.873);
+}
+
+#close{
+    cursor: pointer;
+}
+
+.modal >h3{
+    margin-top: 20px;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+.icons{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.icon{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.facebook{
+    color: #1771e6;
+    border: 1px solid #1771e6;
+    transition:0.5s ease-in-out;
+}
+.facebook:hover{
+    background-color: #1771e6;
+    color: white;
+}
+
+.twitter{
+    color: #1c99e6;
+    border: 1px solid #1c99e6;
+    transition:0.5s ease-in-out;
+}
+.twitter:hover{
+    background-color: #1c99e6;
+    color: white;
+}
+
+.instagram{
+    color: #cb2770;
+    border: 1px solid #cb2770;
+    transition:0.5s ease-in-out;
+}
+.instagram:hover{
+    background-color: #cb2770;
+    color: white;
+}
+
+.whatsapp{
+    color: #2fe664;
+    border: 1px solid #2fe664;
+    transition:0.5s ease-in-out;
+}
+.whatsapp:hover{
+    background-color: #2fe664;
+    color: white;
+}
+
+.telegram{
+    color: #0081c2;
+    border: 1px solid #0081c2;
+    transition:0.5s ease-in-out;
+}
+.telegram:hover{
+    background-color: #0081c2;
+    color: white;
+}
+
